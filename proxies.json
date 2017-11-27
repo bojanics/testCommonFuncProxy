@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "sasatstcmnfncsendmailproxy": {
+            "matchCondition": {
+                "route": "/sendmail/{operation}"
+            },
+            "backendUri": "https://prod-46.westeurope.logic.azure.com/workflows/829ac6d6b86e47c0b855fb6cb3eb6421/triggers/manual/paths/invoke/{operation}?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0963WzC9VXNXhuyNbw7zimroJruBIvq_1D8xniIyNJY",
+            "requestOverrides": {
+                "backend.request.method": "POST"
+            }
+        }        
+    }
+}
